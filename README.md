@@ -3,6 +3,12 @@
 This Laravel-based backend application integrates with [Squake](https://squake.earth) to calculate carbon emissions for various travel types including **flight**, **train**, and **hotel**.
 
 ---
+## Tech Stack
+
+- PHP 8.0.25
+- Laravel 9.52.20
+
+---
 
 ## Features
 

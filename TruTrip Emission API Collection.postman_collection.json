@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "a2b4d166-8e70-4e25-a1cd-601c682912fb",
+		"name": "TruTrip Emission API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "72295"
+	},
+	"item": [
+		{
+			"name": "Flight Emission",
+			"item": [
+				{
+					"name": "Flight Emission - TIM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"TIM\",\n        \"origin\": \"BER\",\n        \"destination\": \"MAD\",\n        \"booking_class\": \"business\",\n        \"aircraft_type\": \"320\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - ADEME",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"ADEME\",\n        \"origin\": \"FRA\",\n        \"destination\": \"JFK\",\n        \"number_of_travelers\": 1,\n        \"aircraft_size\": \"under_180_seats\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - DEFRA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"DEFRA\",\n        \"origin\": \"BER\",\n        \"destination\": \"LAX\",\n        \"number_of_travelers\": 2,\n        \"booking_class\": \"first\",\n        \"aircraft_type\": \"737\",\n        \"radiative_forcing_index\": true\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - CO2-EMISSIEFACTOREN-NL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"CO2-EMISSIEFACTOREN-NL\",\n        \"origin\": \"JFK\",\n        \"destination\": \"ORY\",\n        \"number_of_travelers\": 1,\n        \"booking_class\": \"economy\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - GATE4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"GATE4\",\n        \"origin\": \"BER\",\n        \"destination\": \"LUX\",\n        \"number_of_travelers\": 1,\n        \"booking_class\": \"business\",\n        \"airline\": \"LG\",\n        \"flight_number\": \"LG9474\",\n        \"external_reference\": \"test\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - ICAO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"ICAO\",\n        \"origin\": \"LHR\",\n        \"destination\": \"NIC\",\n        \"number_of_travelers\": 1,\n        \"aircraft_type\": \"737\",\n        \"airline\": \"AA\",\n        \"fare_class\": \"Y\",\n        \"external_reference\": \"test_7\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - US-EPA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"US-EPA\",\n        \"origin\": \"JFK\",\n        \"destination\": \"ORY\",\n        \"number_of_travelers\": 1,\n        \"external_reference\": \"test_1\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight Emission - TIM GreenCarbon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"flight\",\n    \"parameters\": {\n        \"methodology\": \"tim\",\n        \"external_reference\": \"green_123\",\n        \"origin\": \"AAE\",\n        \"destination\": \"ALG\",\n        \"booking_class\": \"business\",\n        \"sustainable_fuels\": {\n            \"carbon_reduction_percentage_of_total\": 0.8\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Train Emission",
+			"item": [
+				{
+					"name": "Train Emission - SQUAKE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"train\",\n    \"parameters\": {\n        \"methodology\": \"SQUAKE\",\n        \"origin\": \"Nice\",\n        \"destination\": \"ORY\",\n        \"number_of_travelers\": 2,\n        \"train_type\": \"high_speed\",\n        \"seat_type\": \"second_class\",\n        \"fuel_type\": \"diesel\",\n        \"operator_name\": \"sncf\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Train Emission - ADEME",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"train\",\n    \"parameters\": {\n        \"methodology\": \"ADEME\",\n        \"origin\": \"BER\",\n        \"destination\": \"FRA\",\n        \"number_of_travelers\": 3,\n        \"train_type\": \"mainline\",\n        \"fuel_type\": \"diesel\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Train Emission - BASE-EMPREINTE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"train\",\n    \"parameters\": {\n        \"methodology\": \"BASE-EMPREINTE\",\n        \"origin\": \"FRA\",\n        \"destination\": \"NCE\",\n        \"number_of_travelers\": 1,\n        \"train_type\": \"tram\",\n        \"state\": \"Ile-de-France\",\n        \"country\": \"FR\",\n        \"year\": \"2021\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Train Emission - CO2-EMISSIEFACTOREN-NL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"train\",\n    \"parameters\": {\n        \"methodology\": \"CO2-EMISSIEFACTOREN-NL\",\n        \"train_type\": \"international\",\n        \"fuel_type\": \"average\",\n        \"distance_in_km\": 1,\n        \"number_of_travelers\": 1,\n        \"external_reference\": \"test\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Train Emission - DEFRA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"train\",\n    \"parameters\": {\n        \"methodology\": \"DEFRA\",\n        \"origin\": \"BER\",\n        \"destination\": \"FRA\",\n        \"number_of_travelers\": 3,\n        \"train_type\": \"light\",\n        \"energy_scope\": \"ttw\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel Emission",
+			"item": [
+				{
+					"name": "Hotel Emission - SQUAKE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"hotel\",\n    \"parameters\": {\n        \"methodology\": \"SQUAKE\",\n        \"number_of_nights\": 3,\n        \"stars\": 4,\n        \"room_type\": \"twin\",\n        \"code\": \"ADQFBCEK\",\n        \"code_type\": \"amadeus\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel Emission - HCMI",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"hotel\",\n    \"parameters\": {\n        \"methodology\": \"HCMI\",\n        \"external_reference\": \"hcmi_123\",\n        \"country\": \"AU\",\n        \"city\": \"Villa La Angostura\",\n        \"hotel_type\": \"urban_location\",\n        \"stars\": 4,\n        \"hcmi_member\": false,\n        \"number_of_nights\": 1\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel Emission - DEFRA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-API-TOKEN",
+								"value": "supersecuretoken123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"hotel\",\n    \"parameters\": {\n        \"methodology\": \"DEFRA\",\n        \"external_reference\": \"test_1\",\n        \"country\": \"GB\",\n        \"city\": \"London\",\n        \"number_of_nights\": 3\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/emissions/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"emissions",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
